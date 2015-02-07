@@ -1,9 +1,6 @@
-### fatctrl-the-phone :
-# FΔT MIDI Controller: The Phone !
-
+# FΔT MIDI Controller: The Phone 
 This project demonstrates a basic MIDI controller done with
 Arduino UNO clone.
-
 --
 
 Darran has made a basic USB MIDI driver for atmega8u2 which works fantastically. 
@@ -12,12 +9,12 @@ The driver sends MIDI messages serially over USB at 115200 baud.
 The MIDI messages can be modified and created in midi_messages.h file. The basic message that's sent via serial is four bytes long.
 
 ```
-- **Byte 0:** MIDI command
+**Byte 0:** MIDI command
   e.g Note Off: 1000nnnn, e.g. 0x80
-  Note On: 1001nnnn, e.g. 0x90
-- **Byte 1:** MIDI channel from 1 to 16
-- **Byte 2:** MIDI data byte 2
-- **Byte 3:** MIDI data byte 3
+      Note On:  1001nnnn, e.g. 0x90
+**Byte 1:** MIDI channel from 1 to 16
+**Byte 2:** MIDI data byte 2
+**Byte 3:** MIDI data byte 3
 ```
 
 These data bytes depend on the command. For Note On/Off they're pitch and velocity values.
