@@ -1,9 +1,9 @@
 # FΔT MIDI Controller: The Phone 
-This project demonstrates a basic MIDI controller done with Arduino UNO clone. The controller sends basic MIDI data so it can be used with any software that accept MIDI. I'm using Ableton Live 9 myself. I like the ability to map my MIDI commands to basically anything.
+This project demonstrates a basic MIDI controller done with Arduino UNO clone. The controller sends basic MIDI data so it can be used with any software that accepts MIDI. I'm using Ableton Live 9 myself. I like the ability to map my MIDI commands to basically anything.
 
 ## Few words about MIDI
 
-This dude [*darran*](http://hunt.net.nz/users/darran/weblog/5b7f8/Arduino_UNO_USB_MIDI_firmware.html) has made a neat USB MIDI driver for atmega8u2, among other interesting things.  
+This dude [*darran*](http://hunt.net.nz/users/darran/weblog/5b7f8/Arduino_UNO_USB_MIDI_firmware.html) has made a great USB MIDI driver for atmega8u2, among other interesting things.  
 
 Original Uno firmware needs to be flipped with that driver. I did the flippin' with [Atmels FLIP progammer](http://www.atmel.com/tools/flip.aspx?tab=overview).
 
