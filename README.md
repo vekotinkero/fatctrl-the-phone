@@ -1,5 +1,5 @@
 # FΔT MIDI Controller: The Phone 
-This project demonstrates a basic MIDI controller done with Arduino UNO clone. The controller sends basic MIDI data so it can be used in any software that accept MIDI. I'm using Ableton Live 9 myself. I like the ability to map my MIDI commands to basically anything.
+This project demonstrates a basic MIDI controller done with Arduino UNO clone. The controller sends basic MIDI data so it can be used with any software that accept MIDI. I'm using Ableton Live 9 myself. I like the ability to map my MIDI commands to basically anything.
 
 ## Few words about MIDI
 
@@ -33,7 +33,8 @@ The serial message might look something like this:
 Got it? So you can develop your own messages by checking the MIDI specification.
 Find more about MIDI messages here: http://www.midi.org/techspecs/midimessages.php
 
-More about flipping the firmware:
+More about flipping the firmware on 8u2: http://arduino.cc/en/Hacking/DFUProgramming8U2
+
 Some conversation about darrans MIDI driver version 0.2: http://hunt.net.nz/users/darran/weblog/52882/Arduino_UNO_MIDI_USB_version_02.html#comments
 
 --
