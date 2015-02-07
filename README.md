@@ -3,10 +3,13 @@ This project demonstrates a basic MIDI controller done with Arduino UNO clone. T
 
 ## Few words about MIDI
 
-Darran has made a basic USB MIDI driver for atmega8u2 which works fantastically. 
-The driver sends MIDI messages serially over USB at 115200 baud.
+This dude [*darran*](http://hunt.net.nz/users/darran/weblog/5b7f8/Arduino_UNO_USB_MIDI_firmware.html) has made a neat USB MIDI driver for atmega8u2, among other interesting things.  
 
-The MIDI messages can be modified and created in midi_messages.h file. The basic message that's sent via serial is four bytes long.
+Original Uno firmware needs to be flipped with that driver. I did the flippin' with [Atmels FLIP progammer](http://www.atmel.com/tools/flip.aspx?tab=overview).
+
+Flipping is a minor headache, because to test the code you'll need to flip the firmware and to again modfiy code you'll need to flip the original Arduino firmware back. It's alright since you can develop the code pretty much just by staring at the serial monitor once you understand how MIDI works.
+
+The MIDI messages are sent serially over USB at 115200 baud. They can be modified and created in midi_messages.h file. The basic message that's sent is four bytes long.
 
 ```
 Byte 0: MIDI Command
@@ -21,17 +24,17 @@ These data bytes depend on the command. For Note On/Off they're pitch and veloci
 And for Control Change they're Control Number and Control Value.
 
 The serial message might look something like this:
+```
 1001000 00000001 00001100 01000000 
 = 0x90 0x01 0x0c 0x40
 = Note On, Channel 1, Note 12 (C1), velocity 64
+```
 
 Got it? So you can develop your own messages by checking the MIDI specification.
 Find more about MIDI messages here: http://www.midi.org/techspecs/midimessages.php
 
-Original Uno firmware is flipped with Arduino-usbmidi-0.1.hex, which can be found here. Just scroll down and look for the post:
-http://hunt.net.nz/users/darran/
-I did the flippin' with Atmels FLIP progammer:
-http://www.atmel.com/tools/flip.aspx?tab=overview
+More about flipping the firmware:
+Some conversation about darrans MIDI driver version 0.2: http://hunt.net.nz/users/darran/weblog/52882/Arduino_UNO_MIDI_USB_version_02.html#comments
 
 --
 ### So what did I do?
